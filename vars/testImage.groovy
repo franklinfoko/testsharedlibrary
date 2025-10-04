@@ -1,4 +1,4 @@
-def call(Sring CONTAINER_NAME, String IMAGE_NAME, String IMAGE_TAG) {
+def call(String CONTAINER_NAME, String IMAGE_NAME, String IMAGE_TAG) {
     sh '''
         echo "Launch test container"
         docker run -d -p 5000:5000 --name ${CONTAINER_NAME} ${IMAGE_NAME}:${IMAGE_TAG}
